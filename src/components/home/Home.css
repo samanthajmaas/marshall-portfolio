@@ -1,0 +1,19 @@
+.hp-img-cont{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.hp-images{
+    display: flex;
+    justify-content: space-between;
+}
+
+.hex{
+    cursor: pointer;
+    width: 13em;
+    filter:grayscale(1)
+}
+
+.hex:hover{
+    filter:grayscale(0)
+}
