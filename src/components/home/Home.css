@@ -3,9 +3,25 @@
     margin-right: 10%;
 }
 
-.hp-images{
+.hp-images-top{
     display: flex;
     justify-content: space-between;
+    margin-right: 20%;
+    margin-left: 20%;
+}
+
+.hp-images-middle{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 26%;
+    margin-left: 26%;
+}
+
+.hp-images-bottom{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20%;
+    margin-left: 20%;
 }
 
 .hex{
@@ -16,4 +32,19 @@
 
 .hex:hover{
     filter:grayscale(0)
+}
+
+.hp-description-cont{
+    margin-right: 25%;
+    margin-left: 25%;
+}
+
+.hp-description-head{
+    display: flex;
+    justify-content: center;
+}
+
+.hp-description{
+    display: flex;
+    justify-content: center;
 }

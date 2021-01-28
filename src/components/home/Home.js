@@ -20,8 +20,10 @@ export const HomePage = (props) => {
                 </section>
             </article>
             <article className="hp-description-cont">
-                <section className="hp-description">
+                <section className="hp-description-head">
                     <h3 className="description-header">Neighborhood designer, journalist & wine lover</h3>
+                </section>
+                <section className="hp-description">
                     <div className="description-para">Parbentiquid cepse talestri pristeludam iam demolic ienisquon tum et con hucienatuus
                     et; C. Mulius dempl. Viventr arissed mod facies consus, ut curo, que tuus re cupio me in
                     horus. Cupicae cepordiis, con ia inatilintem ia dessent, se pri spere abus horuntr atusulem
@@ -31,22 +33,14 @@ export const HomePage = (props) => {
                 </section>
             </article>
             <article className="hp-img-cont">
-                <section className="hp-images">
+                <section className="hp-images-top">
                     <Hexagon
                         className="hex"
                         style={{
                             stroke: "white",
                         }}
-                        backgroundImage={Img1}
-                        backgroundScale="1.2"
-                        href=""
-                    />
-                     <Hexagon
-                        className="hex"
-                        style={{
-                            stroke: "white",
-                        }}
-                        backgroundImage={Img2}
+                        backgroundImage={Img6}
+                        backgroundScale="1.05"
                         href=""
                     />
                     <Hexagon
@@ -54,8 +48,8 @@ export const HomePage = (props) => {
                         style={{
                             stroke: "white",
                         }}
-                        backgroundImage={Img3}
-                        backgroundScale="1.1"
+                        backgroundImage={Img6}
+                        backgroundScale="1.05"
                         href=""
                     />
                     <Hexagon
@@ -63,8 +57,8 @@ export const HomePage = (props) => {
                         style={{
                             stroke: "white",
                         }}
-                        backgroundImage={Img4}
-                        backgroundScale="1.1"
+                        backgroundImage={Img6}
+                        backgroundScale="1.05"
                         href=""
                     />
                     <Hexagon
@@ -72,8 +66,93 @@ export const HomePage = (props) => {
                         style={{
                             stroke: "white",
                         }}
-                        backgroundImage={Img5}
-                        backgroundScale=""
+                        backgroundImage={Img6}
+                        backgroundScale="1.05"
+                        href=""
+                    />
+                    <Hexagon
+                        className="hex"
+                        style={{
+                            stroke: "white",
+                        }}
+                        backgroundImage={Img6}
+                        backgroundScale="1.05"
+                        href=""
+                    />
+                </section>
+                <section className="hp-images-middle">
+                    <Hexagon
+                        className="hex"
+                        style={{
+                            stroke: "white",
+                        }}
+                        backgroundImage={Img6}
+                        backgroundScale="1.05"
+                        href=""
+                    />
+                    <Hexagon
+                        className="hex"
+                        style={{
+                            stroke: "white",
+                        }}
+                        backgroundImage={Img6}
+                        backgroundScale="1.05"
+                        href=""
+                    />
+                    <Hexagon
+                        className="hex"
+                        style={{
+                            stroke: "white",
+                        }}
+                        backgroundImage={Img6}
+                        backgroundScale="1.05"
+                        href=""
+                    />
+                    <Hexagon
+                        className="hex"
+                        style={{
+                            stroke: "white",
+                        }}
+                        backgroundImage={Img6}
+                        backgroundScale="1.05"
+                        href=""
+                    />
+                </section>
+                <section className="hp-images-bottom">
+                    <Hexagon
+                        className="hex"
+                        style={{
+                            stroke: "white",
+                        }}
+                        backgroundImage={Img6}
+                        backgroundScale="1.05"
+                        href=""
+                    />
+                    <Hexagon
+                        className="hex"
+                        style={{
+                            stroke: "white",
+                        }}
+                        backgroundImage={Img6}
+                        backgroundScale="1.05"
+                        href=""
+                    />
+                    <Hexagon
+                        className="hex"
+                        style={{
+                            stroke: "white",
+                        }}
+                        backgroundImage={Img6}
+                        backgroundScale="1.05"
+                        href=""
+                    />
+                    <Hexagon
+                        className="hex"
+                        style={{
+                            stroke: "white",
+                        }}
+                        backgroundImage={Img6}
+                        backgroundScale="1.05"
                         href=""
                     />
                     <Hexagon
