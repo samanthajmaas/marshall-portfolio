@@ -1,13 +1,13 @@
 import './Main.css';
 import { Route } from "react-router-dom"
-import { Nav } from './nav/Nav';
-import { HomePage } from './home/Home';
+import { AppViews } from './AppViews';
 
-export const Main = (props) => {
+export const Main = () => {
   return (
-    <>
-      <Nav {...props}/>
-      <HomePage {...props}/>
-    </>
+
+      <Route render={props =>
+        <AppViews
+          {...props} />} />
+
   )
 }

@@ -10,7 +10,7 @@ export const Nav = (props) => {
                 <div className="nav">
                     <Link
                         className="nav__btn"
-                        onClick={() => props.history.push("/home")}>
+                        onClick={() => props.history.push("/")}>
                         Home
                             </Link>
                     <Link

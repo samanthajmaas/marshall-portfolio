@@ -2,11 +2,6 @@ import React from "react"
 import { Link } from "react-router-dom"
 import Hexagon from 'react-hexagon'
 import "./Home.css"
-import Img1 from "../imgs/wine-1.jpg"
-import Img2 from "../imgs/wine-2.jpg"
-import Img3 from "../imgs/wine-3.jpg"
-import Img4 from "../imgs/wine-4.jpg"
-import Img5 from "../imgs/wine-5.jpg"
 import Img6 from "../imgs/wine-6.jpg"
 
 
@@ -14,8 +9,10 @@ export const HomePage = (props) => {
     return (
         <>
             <article className="hp-header-cont">
-                <section className="hp-header">
+                <section className="hp-header-top">
                     <h2>DESIGNS BY</h2>
+                </section>
+                <section className="hp-header-bottom">
                     <h1>MARSHALL BLEVINS</h1>
                 </section>
             </article>
@@ -167,10 +164,12 @@ export const HomePage = (props) => {
                 </section>
             </article>
             <article className="hp-port-link-cont">
+                <br>
+                </br>
                 <Link
                     className="nav__btn"
                     onClick={() => props.history.push("/portfolio")}>
-                    Portfolio
+                    PORTFOLIO
                 </Link>
             </article>
 

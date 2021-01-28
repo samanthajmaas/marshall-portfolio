@@ -1,3 +1,12 @@
+
+.hp-header-cont{
+    margin-left: 20%;
+}
+
+.hp-header-top{
+    margin-bottom: -5em;
+}
+
 .hp-img-cont{
     margin-left: 10%;
     margin-right: 10%;
@@ -47,4 +56,8 @@
 .hp-description{
     display: flex;
     justify-content: center;
+}
+
+.hp-port-link-cont{
+    margin-left: 65%;
 }
