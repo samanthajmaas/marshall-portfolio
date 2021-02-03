@@ -1,0 +1,15 @@
+.big-hex{
+    cursor: pointer;
+    width: 30em;
+    filter:grayscale(1)
+}
+
+.big-hex:hover{
+    filter:grayscale(0)
+}
+
+.ab-main-cont{
+    display: flex;
+    margin-right: 10%;
+    margin-left: 10%;
+}
