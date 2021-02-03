@@ -28,7 +28,7 @@ export const About = (props) => {
                         </section>
                         <section className="ab-2-left-imgs">
                             <Hexagon
-                                className="hex"
+                                className="hex hex-1"
                                 style={{
                                     stroke: "white",
                                 }}
@@ -37,7 +37,7 @@ export const About = (props) => {
                                 href=""
                             />
                             <Hexagon
-                                className="hex"
+                                className="hex hex-2"
                                 style={{
                                     stroke: "white",
                                 }}
@@ -49,7 +49,7 @@ export const About = (props) => {
                         </section>
                         <section className="ab-2-right-imgs">
                             <Hexagon
-                                className="hex"
+                                className="hex hex-3"
                                 style={{
                                     stroke: "white",
                                 }}
@@ -58,7 +58,7 @@ export const About = (props) => {
                                 href=""
                             />
                             <Hexagon
-                                className="hex"
+                                className="hex hex-4"
                                 style={{
                                     stroke: "white",
                                 }}
