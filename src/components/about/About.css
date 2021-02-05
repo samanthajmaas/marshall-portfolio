@@ -1,0 +1,94 @@
+
+
+.ab-header-cont{
+    margin-left: 20%;
+}
+
+.ab-right{
+    margin-left: 10%;
+}
+
+.ab-name-cont{
+    display: flex;
+    justify-content: center;
+}
+.ab-name{
+    margin-bottom: -2%;
+}
+
+.ab-title{
+    margin-bottom: 3%;
+}
+
+.ab-name-title-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.ab-desc-cont{
+    display: flex;
+    justify-content: center;
+}
+
+.ab-title{
+    font-size: 2em;
+}
+
+.ab-para{
+    font-size: 1.5em;
+}
+
+.big-hex{
+    cursor: pointer;
+    width: 30em;
+    filter:grayscale(1)
+}
+
+.big-hex:hover{
+    filter:grayscale(0)
+}
+
+.ab-main-cont{
+    display: flex;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.ab-2-left-imgs{
+    position: relative;
+}
+
+.hex-1{
+    position: absolute;
+    left: 2em;
+    top: -3em;
+}
+
+.hex-2{
+    position: absolute;
+    left: -7em;
+    top: -9em;
+}
+
+.ab-2-right-imgs{
+    position: relative;
+}
+
+.hex-3{
+    position: absolute;
+    right: 2em;
+    top: -3em;
+}
+
+.hex-4{
+    position: absolute;
+    right: -7em;
+    top: -9em;
+}
+
+.ab-port-link-cont{
+    margin-left: 80%;
+    margin-top: 5%;
+}
