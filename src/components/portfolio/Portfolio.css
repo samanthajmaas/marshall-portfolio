@@ -1,0 +1,95 @@
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
+.port-main-header-cont{
+    margin-left: 20%;
+}
+
+.port-social-header-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-desc-para{
+    width: 40%;
+    padding: 1%;
+}
+
+.port-social-imgs-cont{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.port-social-imgs-top{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20%;
+    margin-left: 20%;
+}
+
+.port-social-imgs-bott{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 26%;
+    margin-left: 26%;
+}
+
+.port-info-header-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-desc-para{
+    width: 40%;
+    padding: 1%;
+}
+
+.port-info-imgs-cont{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.port-info-imgs-top{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20%;
+    margin-left: 20%;
+}
+
+.port-info-imgs-bott{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 26%;
+    margin-left: 26%;
+}
+
+.port-corps-header-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.corps-desc-para{
+    width: 40%;
+    padding: 1%;
+}
+
+.port-corps-imgs-cont{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.port-corps-imgs-top{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20%;
+    margin-left: 20%;
+}
+
+.port-corps-imgs-bott{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 26%;
+    margin-left: 26%;
+}
