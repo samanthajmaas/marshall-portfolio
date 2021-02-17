@@ -13,6 +13,7 @@ export const Portfolio = (props) => {
     const [isSocialOpen, setIsSocialOpen] = useState(false);
     const [isInfoOpen, setIsInfoOpen] = useState(false);
     const [isPeaceOpen, setIsPeaceOpen ] = useState(false);
+    const [index, setIndex] = useState(0)
 
     const toggleSocialChange = () => (isSocialOpen ? setIsSocialOpen(false) : setIsSocialOpen(true))
     const toggleInfoChange = () => (isInfoOpen ? setIsInfoOpen(false) : setIsInfoOpen(true))
@@ -35,12 +36,12 @@ export const Portfolio = (props) => {
 
     const InfoImagesScroll = [
         {
-            original: Img5,
-            thumbnail: Img5,
-        },
-        {
             original: Img6,
             thumbnail: Img6,
+        },
+        {
+            original: Img5,
+            thumbnail: Img5,
         },
         {
             original: Img4,
@@ -50,16 +51,16 @@ export const Portfolio = (props) => {
 
     const PeaceImgsScroll = [
         {
-            original: Img4,
-            thumbnail: Img4,
+            original: Img6,
+            thumbnail: Img6,
         },
         {
             original: Img5,
             thumbnail: Img5,
         },
         {
-            original: Img6,
-            thumbnail: Img6,
+            original: Img4,
+            thumbnail: Img4,
         },
         
     ];
@@ -82,7 +83,7 @@ export const Portfolio = (props) => {
             <Modal isOpen={isSocialOpen} toggle={toggleSocialChange}>
                 <ModalHeader toggle={toggleSocialChange}>Images</ModalHeader>
                 <ModalBody>
-                    <ImageGallery items={SocialImagesScroll} showFullscreenButton={false} showPlayButton={false} startIndex={1} />
+                    <ImageGallery items={SocialImagesScroll} showFullscreenButton={false} showPlayButton={false} startIndex={index} />
                 </ModalBody>
             </Modal>
             <article className="port-social-imgs-cont">
@@ -92,7 +93,10 @@ export const Portfolio = (props) => {
                         style={{
                             stroke: "white",
                         }}
-                        onClick={toggleSocialChange}
+                        onClick={() => {
+                            toggleSocialChange();
+                            setIndex(0)
+                        }}
                         backgroundImage={Img6}
                         backgroundScale="1.05"
                         href=""
@@ -103,7 +107,10 @@ export const Portfolio = (props) => {
                             stroke: "white",
                         }}
                         backgroundImage={Img5}
-                        onClick={toggleSocialChange}
+                        onClick={() => {
+                            toggleSocialChange();
+                            setIndex(1)
+                        }}
                         backgroundScale="1.05"
                         href=""
                     />
@@ -113,7 +120,10 @@ export const Portfolio = (props) => {
                             stroke: "white",
                         }}
                         backgroundImage={Img4}
-                        onClick={toggleSocialChange}
+                        onClick={() => {
+                            toggleSocialChange();
+                            setIndex(2)
+                        }}
                         backgroundScale="1.05"
                         href=""
                     />
@@ -186,7 +196,7 @@ export const Portfolio = (props) => {
             <Modal isOpen={isInfoOpen} toggle={toggleInfoChange}>
                 <ModalHeader toggle={toggleInfoChange}>Images</ModalHeader>
                 <ModalBody>
-                    <ImageGallery items={InfoImagesScroll} showFullscreenButton={false} showPlayButton={false} startIndex={1} />
+                    <ImageGallery items={InfoImagesScroll} showFullscreenButton={false} showPlayButton={false} startIndex={index} />
                 </ModalBody>
             </Modal>
 
@@ -197,7 +207,10 @@ export const Portfolio = (props) => {
                         style={{
                             stroke: "white",
                         }}
-                        onClick={toggleInfoChange}
+                        onClick={() => {
+                            toggleInfoChange();
+                            setIndex(0)
+                        }}
                         backgroundImage={Img6}
                         backgroundScale="1.05"
                         href=""
@@ -208,7 +221,10 @@ export const Portfolio = (props) => {
                             stroke: "white",
                         }}
                         backgroundImage={Img5}
-                        onClick={toggleInfoChange}
+                        onClick={() => {
+                            toggleInfoChange();
+                            setIndex(1)
+                        }}
                         backgroundScale="1.05"
                         href=""
                     />
@@ -218,7 +234,10 @@ export const Portfolio = (props) => {
                             stroke: "white",
                         }}
                         backgroundImage={Img4}
-                        onClick={toggleInfoChange}
+                        onClick={() => {
+                            toggleInfoChange();
+                            setIndex(2)
+                        }}
                         backgroundScale="1.05"
                         href=""
                     />
@@ -293,7 +312,7 @@ export const Portfolio = (props) => {
             <Modal isOpen={isPeaceOpen} toggle={togglePeaceOpen}>
                 <ModalHeader toggle={togglePeaceOpen}>Images</ModalHeader>
                 <ModalBody>
-                    <ImageGallery items={PeaceImgsScroll} showFullscreenButton={false} showPlayButton={false} />
+                    <ImageGallery items={PeaceImgsScroll} showFullscreenButton={false} showPlayButton={false} startIndex={index} />
                 </ModalBody>
             </Modal>
             <article className="port-corps-imgs-cont">
@@ -303,7 +322,10 @@ export const Portfolio = (props) => {
                         style={{
                             stroke: "white",
                         }}
-                        onClick={togglePeaceOpen}
+                        onClick={() => {
+                            togglePeaceOpen();
+                            setIndex(0)
+                        }}
                         backgroundImage={Img6}
                         backgroundScale="1.05"
                         href=""
@@ -314,7 +336,10 @@ export const Portfolio = (props) => {
                             stroke: "white",
                         }}
                         backgroundImage={Img5}
-                        onClick={togglePeaceOpen}
+                        onClick={() => {
+                            togglePeaceOpen();
+                            setIndex(1)
+                        }}
                         backgroundScale="1.05"
                         href=""
                     />
@@ -324,7 +349,10 @@ export const Portfolio = (props) => {
                             stroke: "white",
                         }}
                         backgroundImage={Img4}
-                        onClick={togglePeaceOpen}
+                        onClick={() => {
+                            togglePeaceOpen();
+                            setIndex(2)
+                        }}
                         backgroundScale="1.05"
                         href=""
                     />
