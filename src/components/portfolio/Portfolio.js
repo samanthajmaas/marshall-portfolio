@@ -74,21 +74,21 @@ export const Portfolio = (props) => {
             </article>
 
             <Modal isOpen={isSocialOpen} toggle={toggleSocialChange}>
-                <ModalHeader toggle={toggleSocialChange}>Images</ModalHeader>
+                <ModalHeader toggle={toggleSocialChange}>SOCIAL MEDIA & MARKETING</ModalHeader>
                 <ModalBody>
                     <ImageGallery items={SocialImagesScroll} showFullscreenButton={false} showPlayButton={false} startIndex={index} />
                 </ModalBody>
             </Modal>
 
             <Modal isOpen={isInfoOpen} toggle={toggleInfoChange}>
-                <ModalHeader toggle={toggleInfoChange}>Images</ModalHeader>
+                <ModalHeader toggle={toggleInfoChange}>INFOGRAPHICS & NEWS</ModalHeader>
                 <ModalBody>
                     <ImageGallery items={InfoImagesScroll} showFullscreenButton={false} showPlayButton={false} startIndex={index} />
                 </ModalBody>
             </Modal>
 
             <Modal isOpen={isPeaceOpen} toggle={togglePeaceOpen}>
-                <ModalHeader toggle={togglePeaceOpen}>Images</ModalHeader>
+                <ModalHeader toggle={togglePeaceOpen}>U.S. PEACE CORPS</ModalHeader>
                 <ModalBody>
                     <ImageGallery items={PeaceImgsScroll} showFullscreenButton={false} showPlayButton={false} startIndex={index} />
                 </ModalBody>
