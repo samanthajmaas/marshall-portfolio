@@ -5,16 +5,15 @@
     width: 100%;
     max-height: 100%;
     background-color: white;
-    min-width: 1200px;
 }
 
 .nav__btn {
     text-decoration: none;
     font-size: 1.3em;
     font-weight: 250;
-    padding: 2em;
-    padding-top: 3em;
-    margin-right: 1rem;
+    padding: 2%;
+    padding-top: 4%;
+    margin-right: 1%;
     text-align: center;
     background-color: white !important;
     color: rgba(0, 0, 0, 0.781) !important;
