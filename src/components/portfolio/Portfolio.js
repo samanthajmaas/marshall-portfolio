@@ -3,8 +3,25 @@ import { Link } from "react-router-dom"
 import Hexagon from 'react-hexagon'
 import "./Portfolio.css"
 import Img6 from "../imgs/wine-6.jpg"
+import ImageGallery from 'react-image-gallery';
 
 export const Portfolio = (props) => {
+
+    const photoScrollImages = [
+        {
+          original: Img6,
+          thumbnail: Img6,
+        },
+        {
+          original: Img6,
+          thumbnail: Img6,
+        },
+        {
+          original: Img6,
+          thumbnail: Img6,
+        },
+      ];
+
     return (
         <>
             <article className="port-main-header-cont">
@@ -307,6 +324,9 @@ export const Portfolio = (props) => {
                     onClick={() => props.history.push("/resume")}>
                     RESUME
                 </Link>
+            </article>
+            <article className="port-img-gallery">
+                <ImageGallery items={photoScrollImages} />
             </article>
         </>
     )
