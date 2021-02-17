@@ -1,33 +1,67 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import { Link } from "react-router-dom"
 import Hexagon from 'react-hexagon'
 import "./Portfolio.css"
 import Img6 from "../imgs/wine-6.jpg"
+import Img5 from "../imgs/wine-5.jpg"
+import Img4 from "../imgs/wine-4.jpg"
 import ImageGallery from 'react-image-gallery';
-import {  Button, Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
+import { Modal, ModalHeader, ModalBody } from 'reactstrap';
 
 export const Portfolio = (props) => {
 
-    const [isOpen, setIsOpen] = useState(false);
+    const [isSocialOpen, setIsSocialOpen] = useState(false);
+    const [isInfoOpen, setIsInfoOpen] = useState(false);
+    const [isPeaceOpen, setIsPeaceOpen ] = useState(false);
 
-    const toggleChange = () => (isOpen ? setIsOpen(false) : setIsOpen(true))
+    const toggleSocialChange = () => (isSocialOpen ? setIsSocialOpen(false) : setIsSocialOpen(true))
+    const toggleInfoChange = () => (isInfoOpen ? setIsInfoOpen(false) : setIsInfoOpen(true))
+    const togglePeaceOpen = () => (isPeaceOpen ? setIsPeaceOpen(false) : setIsPeaceOpen(true))
 
-    useEffect(() => {
-    }, [isOpen])
-
-    const photoScrollImages = [
+    const SocialImagesScroll = [
         {
             original: Img6,
             thumbnail: Img6,
+        },
+        {
+            original: Img5,
+            thumbnail: Img5,
+        },
+        {
+            original: Img4,
+            thumbnail: Img4,
+        },
+    ];
+
+    const InfoImagesScroll = [
+        {
+            original: Img5,
+            thumbnail: Img5,
         },
         {
             original: Img6,
             thumbnail: Img6,
         },
         {
+            original: Img4,
+            thumbnail: Img4,
+        },
+    ];
+
+    const PeaceImgsScroll = [
+        {
+            original: Img4,
+            thumbnail: Img4,
+        },
+        {
+            original: Img5,
+            thumbnail: Img5,
+        },
+        {
             original: Img6,
             thumbnail: Img6,
         },
+        
     ];
 
     return (
@@ -45,6 +79,12 @@ export const Portfolio = (props) => {
                     </div>
                 </section>
             </article>
+            <Modal isOpen={isSocialOpen} toggle={toggleSocialChange}>
+                <ModalHeader toggle={toggleSocialChange}>Images</ModalHeader>
+                <ModalBody>
+                    <ImageGallery items={SocialImagesScroll} showFullscreenButton={false} showPlayButton={false} startIndex={1} />
+                </ModalBody>
+            </Modal>
             <article className="port-social-imgs-cont">
                 <section className="port-social-imgs-top">
                     <Hexagon
@@ -52,6 +92,7 @@ export const Portfolio = (props) => {
                         style={{
                             stroke: "white",
                         }}
+                        onClick={toggleSocialChange}
                         backgroundImage={Img6}
                         backgroundScale="1.05"
                         href=""
@@ -61,7 +102,8 @@ export const Portfolio = (props) => {
                         style={{
                             stroke: "white",
                         }}
-                        backgroundImage={Img6}
+                        backgroundImage={Img5}
+                        onClick={toggleSocialChange}
                         backgroundScale="1.05"
                         href=""
                     />
@@ -70,7 +112,8 @@ export const Portfolio = (props) => {
                         style={{
                             stroke: "white",
                         }}
-                        backgroundImage={Img6}
+                        backgroundImage={Img4}
+                        onClick={toggleSocialChange}
                         backgroundScale="1.05"
                         href=""
                     />
@@ -140,6 +183,12 @@ export const Portfolio = (props) => {
                     </div>
                 </section>
             </article>
+            <Modal isOpen={isInfoOpen} toggle={toggleInfoChange}>
+                <ModalHeader toggle={toggleInfoChange}>Images</ModalHeader>
+                <ModalBody>
+                    <ImageGallery items={InfoImagesScroll} showFullscreenButton={false} showPlayButton={false} startIndex={1} />
+                </ModalBody>
+            </Modal>
 
             <article className="port-info-imgs-cont">
                 <section className="port-info-imgs-top">
@@ -148,6 +197,7 @@ export const Portfolio = (props) => {
                         style={{
                             stroke: "white",
                         }}
+                        onClick={toggleInfoChange}
                         backgroundImage={Img6}
                         backgroundScale="1.05"
                         href=""
@@ -157,7 +207,8 @@ export const Portfolio = (props) => {
                         style={{
                             stroke: "white",
                         }}
-                        backgroundImage={Img6}
+                        backgroundImage={Img5}
+                        onClick={toggleInfoChange}
                         backgroundScale="1.05"
                         href=""
                     />
@@ -166,7 +217,8 @@ export const Portfolio = (props) => {
                         style={{
                             stroke: "white",
                         }}
-                        backgroundImage={Img6}
+                        backgroundImage={Img4}
+                        onClick={toggleInfoChange}
                         backgroundScale="1.05"
                         href=""
                     />
@@ -237,6 +289,13 @@ export const Portfolio = (props) => {
                     </div>
                 </section>
             </article>
+
+            <Modal isOpen={isPeaceOpen} toggle={togglePeaceOpen}>
+                <ModalHeader toggle={togglePeaceOpen}>Images</ModalHeader>
+                <ModalBody>
+                    <ImageGallery items={PeaceImgsScroll} showFullscreenButton={false} showPlayButton={false} />
+                </ModalBody>
+            </Modal>
             <article className="port-corps-imgs-cont">
                 <section className="port-corps-imgs-top">
                     <Hexagon
@@ -244,6 +303,7 @@ export const Portfolio = (props) => {
                         style={{
                             stroke: "white",
                         }}
+                        onClick={togglePeaceOpen}
                         backgroundImage={Img6}
                         backgroundScale="1.05"
                         href=""
@@ -253,7 +313,8 @@ export const Portfolio = (props) => {
                         style={{
                             stroke: "white",
                         }}
-                        backgroundImage={Img6}
+                        backgroundImage={Img5}
+                        onClick={togglePeaceOpen}
                         backgroundScale="1.05"
                         href=""
                     />
@@ -262,7 +323,8 @@ export const Portfolio = (props) => {
                         style={{
                             stroke: "white",
                         }}
-                        backgroundImage={Img6}
+                        backgroundImage={Img4}
+                        onClick={togglePeaceOpen}
                         backgroundScale="1.05"
                         href=""
                     />
@@ -333,16 +395,6 @@ export const Portfolio = (props) => {
                     RESUME
                 </Link>
             </article>
-            <Button onClick={toggleChange}>Open</Button>
-            <Modal isOpen={isOpen} toggle={toggleChange}>
-                <ModalHeader toggle={toggleChange}>Images</ModalHeader>
-                <ModalBody>
-                    <ImageGallery items={photoScrollImages} />
-                </ModalBody>
-                <ModalFooter>
-                    <Button onClick={toggleChange}>Cancel</Button>
-                </ModalFooter>
-            </Modal>
         </>
     )
 }
