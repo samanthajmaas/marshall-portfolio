@@ -12,7 +12,7 @@ export const Portfolio = (props) => {
 
     const [isSocialOpen, setIsSocialOpen] = useState(false);
     const [isInfoOpen, setIsInfoOpen] = useState(false);
-    const [isPeaceOpen, setIsPeaceOpen ] = useState(false);
+    const [isPeaceOpen, setIsPeaceOpen] = useState(false);
     const [index, setIndex] = useState(0)
 
     const toggleSocialChange = () => (isSocialOpen ? setIsSocialOpen(false) : setIsSocialOpen(true))
@@ -62,7 +62,7 @@ export const Portfolio = (props) => {
             original: Img4,
             thumbnail: Img4,
         },
-        
+
     ];
 
     return (
@@ -72,127 +72,14 @@ export const Portfolio = (props) => {
                     <h1>PORTFOLIO</h1>
                 </section>
             </article>
-            <article className="port-social-header-cont">
-                <section className="port-social-header-title">
-                    <h3 className="port-social-title">SOCIAL MEDIA & MARKETING</h3>
-                    <div className="social-desc-para">Et pa volores nient dolum es dolenitas dicimusciame rerciur, anis
-                    excere elit audaersperum fuga. Nam as quis aut la dolore dolorescimin porio ipsam rest, eumqui voluptat experum, omnia volore
-                    </div>
-                </section>
-            </article>
+
             <Modal isOpen={isSocialOpen} toggle={toggleSocialChange}>
                 <ModalHeader toggle={toggleSocialChange}>Images</ModalHeader>
                 <ModalBody>
                     <ImageGallery items={SocialImagesScroll} showFullscreenButton={false} showPlayButton={false} startIndex={index} />
                 </ModalBody>
             </Modal>
-            <article className="port-social-imgs-cont">
-                <section className="port-social-imgs-top">
-                    <Hexagon
-                        className="hex"
-                        style={{
-                            stroke: "white",
-                        }}
-                        onClick={() => {
-                            toggleSocialChange();
-                            setIndex(0)
-                        }}
-                        backgroundImage={Img6}
-                        backgroundScale="1.05"
-                        href=""
-                    />
-                    <Hexagon
-                        className="hex"
-                        style={{
-                            stroke: "white",
-                        }}
-                        backgroundImage={Img5}
-                        onClick={() => {
-                            toggleSocialChange();
-                            setIndex(1)
-                        }}
-                        backgroundScale="1.05"
-                        href=""
-                    />
-                    <Hexagon
-                        className="hex"
-                        style={{
-                            stroke: "white",
-                        }}
-                        backgroundImage={Img4}
-                        onClick={() => {
-                            toggleSocialChange();
-                            setIndex(2)
-                        }}
-                        backgroundScale="1.05"
-                        href=""
-                    />
-                    <Hexagon
-                        className="hex"
-                        style={{
-                            stroke: "white",
-                        }}
-                        backgroundImage={Img6}
-                        backgroundScale="1.05"
-                        href=""
-                    />
-                    <Hexagon
-                        className="hex"
-                        style={{
-                            stroke: "white",
-                        }}
-                        backgroundImage={Img6}
-                        backgroundScale="1.05"
-                        href=""
-                    />
-                </section>
-                <section className="port-social-imgs-bott">
-                    <Hexagon
-                        className="hex"
-                        style={{
-                            stroke: "white",
-                        }}
-                        backgroundImage={Img6}
-                        backgroundScale="1.05"
-                        href=""
-                    />
-                    <Hexagon
-                        className="hex"
-                        style={{
-                            stroke: "white",
-                        }}
-                        backgroundImage={Img6}
-                        backgroundScale="1.05"
-                        href=""
-                    />
-                    <Hexagon
-                        className="hex"
-                        style={{
-                            stroke: "white",
-                        }}
-                        backgroundImage={Img6}
-                        backgroundScale="1.05"
-                        href=""
-                    />
-                    <Hexagon
-                        className="hex"
-                        style={{
-                            stroke: "white",
-                        }}
-                        backgroundImage={Img6}
-                        backgroundScale="1.05"
-                        href=""
-                    />
-                </section>
-            </article>
-            <article className="port-info-header-cont">
-                <section className="port-info-header-title">
-                    <h3 className="port-info-title">INFOGRAPHICS & NEWS</h3>
-                    <div className="info-desc-para">Et pa volores nient dolum es dolenitas dicimusciame rerciur, anis
-                    excere elit audaersperum fuga. Nam as quis aut la dolore dolorescimin porio ipsam rest, eumqui voluptat experum, omnia volore
-                    </div>
-                </section>
-            </article>
+
             <Modal isOpen={isInfoOpen} toggle={toggleInfoChange}>
                 <ModalHeader toggle={toggleInfoChange}>Images</ModalHeader>
                 <ModalBody>
@@ -200,229 +87,350 @@ export const Portfolio = (props) => {
                 </ModalBody>
             </Modal>
 
-            <article className="port-info-imgs-cont">
-                <section className="port-info-imgs-top">
-                    <Hexagon
-                        className="hex"
-                        style={{
-                            stroke: "white",
-                        }}
-                        onClick={() => {
-                            toggleInfoChange();
-                            setIndex(0)
-                        }}
-                        backgroundImage={Img6}
-                        backgroundScale="1.05"
-                        href=""
-                    />
-                    <Hexagon
-                        className="hex"
-                        style={{
-                            stroke: "white",
-                        }}
-                        backgroundImage={Img5}
-                        onClick={() => {
-                            toggleInfoChange();
-                            setIndex(1)
-                        }}
-                        backgroundScale="1.05"
-                        href=""
-                    />
-                    <Hexagon
-                        className="hex"
-                        style={{
-                            stroke: "white",
-                        }}
-                        backgroundImage={Img4}
-                        onClick={() => {
-                            toggleInfoChange();
-                            setIndex(2)
-                        }}
-                        backgroundScale="1.05"
-                        href=""
-                    />
-                    <Hexagon
-                        className="hex"
-                        style={{
-                            stroke: "white",
-                        }}
-                        backgroundImage={Img6}
-                        backgroundScale="1.05"
-                        href=""
-                    />
-                    <Hexagon
-                        className="hex"
-                        style={{
-                            stroke: "white",
-                        }}
-                        backgroundImage={Img6}
-                        backgroundScale="1.05"
-                        href=""
-                    />
-                </section>
-                <section className="port-info-imgs-bott">
-                    <Hexagon
-                        className="hex"
-                        style={{
-                            stroke: "white",
-                        }}
-                        backgroundImage={Img6}
-                        backgroundScale="1.05"
-                        href=""
-                    />
-                    <Hexagon
-                        className="hex"
-                        style={{
-                            stroke: "white",
-                        }}
-                        backgroundImage={Img6}
-                        backgroundScale="1.05"
-                        href=""
-                    />
-                    <Hexagon
-                        className="hex"
-                        style={{
-                            stroke: "white",
-                        }}
-                        backgroundImage={Img6}
-                        backgroundScale="1.05"
-                        href=""
-                    />
-                    <Hexagon
-                        className="hex"
-                        style={{
-                            stroke: "white",
-                        }}
-                        backgroundImage={Img6}
-                        backgroundScale="1.05"
-                        href=""
-                    />
-                </section>
-            </article>
-
-            <article className="port-corps-header-cont">
-                <section className="port-corps-header-title">
-                    <h3 className="port-corps-title">U.S. PEACE CORPS</h3>
-                    <div className="corps-desc-para">Et pa volores nient dolum es dolenitas dicimusciame rerciur, anis
-                    excere elit audaersperum fuga. Nam as quis aut la dolore dolorescimin porio ipsam rest, eumqui voluptat experum, omnia volore
-                    </div>
-                </section>
-            </article>
-
             <Modal isOpen={isPeaceOpen} toggle={togglePeaceOpen}>
                 <ModalHeader toggle={togglePeaceOpen}>Images</ModalHeader>
                 <ModalBody>
                     <ImageGallery items={PeaceImgsScroll} showFullscreenButton={false} showPlayButton={false} startIndex={index} />
                 </ModalBody>
             </Modal>
-            <article className="port-corps-imgs-cont">
-                <section className="port-corps-imgs-top">
-                    <Hexagon
-                        className="hex"
-                        style={{
-                            stroke: "white",
-                        }}
-                        onClick={() => {
-                            togglePeaceOpen();
-                            setIndex(0)
-                        }}
-                        backgroundImage={Img6}
-                        backgroundScale="1.05"
-                        href=""
-                    />
-                    <Hexagon
-                        className="hex"
-                        style={{
-                            stroke: "white",
-                        }}
-                        backgroundImage={Img5}
-                        onClick={() => {
-                            togglePeaceOpen();
-                            setIndex(1)
-                        }}
-                        backgroundScale="1.05"
-                        href=""
-                    />
-                    <Hexagon
-                        className="hex"
-                        style={{
-                            stroke: "white",
-                        }}
-                        backgroundImage={Img4}
-                        onClick={() => {
-                            togglePeaceOpen();
-                            setIndex(2)
-                        }}
-                        backgroundScale="1.05"
-                        href=""
-                    />
-                    <Hexagon
-                        className="hex"
-                        style={{
-                            stroke: "white",
-                        }}
-                        backgroundImage={Img6}
-                        backgroundScale="1.05"
-                        href=""
-                    />
-                    <Hexagon
-                        className="hex"
-                        style={{
-                            stroke: "white",
-                        }}
-                        backgroundImage={Img6}
-                        backgroundScale="1.05"
-                        href=""
-                    />
-                </section>
-                <section className="port-corps-imgs-bott">
-                    <Hexagon
-                        className="hex"
-                        style={{
-                            stroke: "white",
-                        }}
-                        backgroundImage={Img6}
-                        backgroundScale="1.05"
-                        href=""
-                    />
-                    <Hexagon
-                        className="hex"
-                        style={{
-                            stroke: "white",
-                        }}
-                        backgroundImage={Img6}
-                        backgroundScale="1.05"
-                        href=""
-                    />
-                    <Hexagon
-                        className="hex"
-                        style={{
-                            stroke: "white",
-                        }}
-                        backgroundImage={Img6}
-                        backgroundScale="1.05"
-                        href=""
-                    />
-                    <Hexagon
-                        className="hex"
-                        style={{
-                            stroke: "white",
-                        }}
-                        backgroundImage={Img6}
-                        backgroundScale="1.05"
-                        href=""
-                    />
-                </section>
-            </article>
-            <article className="hp-port-link-cont">
-                <br>
-                </br>
-                <Link
-                    className="nav__btn"
-                    onClick={() => props.history.push("/resume")}>
-                    RESUME
-                </Link>
-            </article>
+
+            {
+                isSocialOpen || isInfoOpen || isPeaceOpen ? null :
+                    <>
+                        <article className="port-social-header-cont">
+                            <section className="port-social-header-title">
+                                <h3 className="port-social-title">SOCIAL MEDIA & MARKETING</h3>
+                                <div className="social-desc-para">Et pa volores nient dolum es dolenitas dicimusciame rerciur, anis
+                                excere elit audaersperum fuga. Nam as quis aut la dolore dolorescimin porio ipsam rest, eumqui voluptat experum, omnia volore
+                    </div>
+                            </section>
+                        </article>
+
+                        <article className="port-social-imgs-cont">
+                            <section className="port-social-imgs-top">
+                                <Hexagon
+                                    className="hex"
+                                    style={{
+                                        stroke: "white",
+                                    }}
+                                    onClick={() => {
+                                        toggleSocialChange();
+                                        setIndex(0)
+                                    }}
+                                    backgroundImage={Img6}
+                                    backgroundScale="1.05"
+                                    href=""
+                                />
+                                <Hexagon
+                                    className="hex"
+                                    style={{
+                                        stroke: "white",
+                                    }}
+                                    backgroundImage={Img5}
+                                    onClick={() => {
+                                        toggleSocialChange();
+                                        setIndex(1)
+                                    }}
+                                    backgroundScale="1.05"
+                                    href=""
+                                />
+                                <Hexagon
+                                    className="hex"
+                                    style={{
+                                        stroke: "white",
+                                    }}
+                                    backgroundImage={Img4}
+                                    onClick={() => {
+                                        toggleSocialChange();
+                                        setIndex(2)
+                                    }}
+                                    backgroundScale="1.05"
+                                    href=""
+                                />
+                                <Hexagon
+                                    className="hex"
+                                    style={{
+                                        stroke: "white",
+                                    }}
+                                    backgroundImage={Img6}
+                                    backgroundScale="1.05"
+                                    href=""
+                                />
+                                <Hexagon
+                                    className="hex"
+                                    style={{
+                                        stroke: "white",
+                                    }}
+                                    backgroundImage={Img6}
+                                    backgroundScale="1.05"
+                                    href=""
+                                />
+                            </section>
+                            <section className="port-social-imgs-bott">
+                                <Hexagon
+                                    className="hex"
+                                    style={{
+                                        stroke: "white",
+                                    }}
+                                    backgroundImage={Img6}
+                                    backgroundScale="1.05"
+                                    href=""
+                                />
+                                <Hexagon
+                                    className="hex"
+                                    style={{
+                                        stroke: "white",
+                                    }}
+                                    backgroundImage={Img6}
+                                    backgroundScale="1.05"
+                                    href=""
+                                />
+                                <Hexagon
+                                    className="hex"
+                                    style={{
+                                        stroke: "white",
+                                    }}
+                                    backgroundImage={Img6}
+                                    backgroundScale="1.05"
+                                    href=""
+                                />
+                                <Hexagon
+                                    className="hex"
+                                    style={{
+                                        stroke: "white",
+                                    }}
+                                    backgroundImage={Img6}
+                                    backgroundScale="1.05"
+                                    href=""
+                                />
+                            </section>
+                        </article>
+                        <article className="port-info-header-cont">
+                            <section className="port-info-header-title">
+                                <h3 className="port-info-title">INFOGRAPHICS & NEWS</h3>
+                                <div className="info-desc-para">Et pa volores nient dolum es dolenitas dicimusciame rerciur, anis
+                                excere elit audaersperum fuga. Nam as quis aut la dolore dolorescimin porio ipsam rest, eumqui voluptat experum, omnia volore
+                    </div>
+                            </section>
+                        </article>
+                        <article className="port-info-imgs-cont">
+                            <section className="port-info-imgs-top">
+                                <Hexagon
+                                    className="hex"
+                                    style={{
+                                        stroke: "white",
+                                    }}
+                                    onClick={() => {
+                                        toggleInfoChange();
+                                        setIndex(0)
+                                    }}
+                                    backgroundImage={Img6}
+                                    backgroundScale="1.05"
+                                    href=""
+                                />
+                                <Hexagon
+                                    className="hex"
+                                    style={{
+                                        stroke: "white",
+                                    }}
+                                    backgroundImage={Img5}
+                                    onClick={() => {
+                                        toggleInfoChange();
+                                        setIndex(1)
+                                    }}
+                                    backgroundScale="1.05"
+                                    href=""
+                                />
+                                <Hexagon
+                                    className="hex"
+                                    style={{
+                                        stroke: "white",
+                                    }}
+                                    backgroundImage={Img4}
+                                    onClick={() => {
+                                        toggleInfoChange();
+                                        setIndex(2)
+                                    }}
+                                    backgroundScale="1.05"
+                                    href=""
+                                />
+                                <Hexagon
+                                    className="hex"
+                                    style={{
+                                        stroke: "white",
+                                    }}
+                                    backgroundImage={Img6}
+                                    backgroundScale="1.05"
+                                    href=""
+                                />
+                                <Hexagon
+                                    className="hex"
+                                    style={{
+                                        stroke: "white",
+                                    }}
+                                    backgroundImage={Img6}
+                                    backgroundScale="1.05"
+                                    href=""
+                                />
+                            </section>
+                            <section className="port-info-imgs-bott">
+                                <Hexagon
+                                    className="hex"
+                                    style={{
+                                        stroke: "white",
+                                    }}
+                                    backgroundImage={Img6}
+                                    backgroundScale="1.05"
+                                    href=""
+                                />
+                                <Hexagon
+                                    className="hex"
+                                    style={{
+                                        stroke: "white",
+                                    }}
+                                    backgroundImage={Img6}
+                                    backgroundScale="1.05"
+                                    href=""
+                                />
+                                <Hexagon
+                                    className="hex"
+                                    style={{
+                                        stroke: "white",
+                                    }}
+                                    backgroundImage={Img6}
+                                    backgroundScale="1.05"
+                                    href=""
+                                />
+                                <Hexagon
+                                    className="hex"
+                                    style={{
+                                        stroke: "white",
+                                    }}
+                                    backgroundImage={Img6}
+                                    backgroundScale="1.05"
+                                    href=""
+                                />
+                            </section>
+                        </article>
+
+                        <article className="port-corps-header-cont">
+                            <section className="port-corps-header-title">
+                                <h3 className="port-corps-title">U.S. PEACE CORPS</h3>
+                                <div className="corps-desc-para">Et pa volores nient dolum es dolenitas dicimusciame rerciur, anis
+                                excere elit audaersperum fuga. Nam as quis aut la dolore dolorescimin porio ipsam rest, eumqui voluptat experum, omnia volore
+                    </div>
+                            </section>
+                        </article>
+                        <article className="port-corps-imgs-cont">
+                            <section className="port-corps-imgs-top">
+                                <Hexagon
+                                    className="hex"
+                                    style={{
+                                        stroke: "white",
+                                    }}
+                                    onClick={() => {
+                                        togglePeaceOpen();
+                                        setIndex(0)
+                                    }}
+                                    backgroundImage={Img6}
+                                    backgroundScale="1.05"
+                                    href=""
+                                />
+                                <Hexagon
+                                    className="hex"
+                                    style={{
+                                        stroke: "white",
+                                    }}
+                                    backgroundImage={Img5}
+                                    onClick={() => {
+                                        togglePeaceOpen();
+                                        setIndex(1)
+                                    }}
+                                    backgroundScale="1.05"
+                                    href=""
+                                />
+                                <Hexagon
+                                    className="hex"
+                                    style={{
+                                        stroke: "white",
+                                    }}
+                                    backgroundImage={Img4}
+                                    onClick={() => {
+                                        togglePeaceOpen();
+                                        setIndex(2)
+                                    }}
+                                    backgroundScale="1.05"
+                                    href=""
+                                />
+                                <Hexagon
+                                    className="hex"
+                                    style={{
+                                        stroke: "white",
+                                    }}
+                                    backgroundImage={Img6}
+                                    backgroundScale="1.05"
+                                    href=""
+                                />
+                                <Hexagon
+                                    className="hex"
+                                    style={{
+                                        stroke: "white",
+                                    }}
+                                    backgroundImage={Img6}
+                                    backgroundScale="1.05"
+                                    href=""
+                                />
+                            </section>
+                            <section className="port-corps-imgs-bott">
+                                <Hexagon
+                                    className="hex"
+                                    style={{
+                                        stroke: "white",
+                                    }}
+                                    backgroundImage={Img6}
+                                    backgroundScale="1.05"
+                                    href=""
+                                />
+                                <Hexagon
+                                    className="hex"
+                                    style={{
+                                        stroke: "white",
+                                    }}
+                                    backgroundImage={Img6}
+                                    backgroundScale="1.05"
+                                    href=""
+                                />
+                                <Hexagon
+                                    className="hex"
+                                    style={{
+                                        stroke: "white",
+                                    }}
+                                    backgroundImage={Img6}
+                                    backgroundScale="1.05"
+                                    href=""
+                                />
+                                <Hexagon
+                                    className="hex"
+                                    style={{
+                                        stroke: "white",
+                                    }}
+                                    backgroundImage={Img6}
+                                    backgroundScale="1.05"
+                                    href=""
+                                />
+                            </section>
+                        </article>
+                        <article className="hp-port-link-cont">
+                            <br>
+                            </br>
+                            <Link
+                                className="nav__btn"
+                                onClick={() => props.history.push("/resume")}>
+                                RESUME
+                            </Link>
+                        </article>
+                    </>
+            }
         </>
     )
 }
