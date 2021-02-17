@@ -1,26 +1,34 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import Hexagon from 'react-hexagon'
 import "./Portfolio.css"
 import Img6 from "../imgs/wine-6.jpg"
 import ImageGallery from 'react-image-gallery';
+import {  Button, Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
 
 export const Portfolio = (props) => {
 
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleChange = () => (isOpen ? setIsOpen(false) : setIsOpen(true))
+
+    useEffect(() => {
+    }, [isOpen])
+
     const photoScrollImages = [
         {
-          original: Img6,
-          thumbnail: Img6,
+            original: Img6,
+            thumbnail: Img6,
         },
         {
-          original: Img6,
-          thumbnail: Img6,
+            original: Img6,
+            thumbnail: Img6,
         },
         {
-          original: Img6,
-          thumbnail: Img6,
+            original: Img6,
+            thumbnail: Img6,
         },
-      ];
+    ];
 
     return (
         <>
@@ -33,7 +41,7 @@ export const Portfolio = (props) => {
                 <section className="port-social-header-title">
                     <h3 className="port-social-title">SOCIAL MEDIA & MARKETING</h3>
                     <div className="social-desc-para">Et pa volores nient dolum es dolenitas dicimusciame rerciur, anis
-                        excere elit audaersperum fuga. Nam as quis aut la dolore dolorescimin porio ipsam rest, eumqui voluptat experum, omnia volore
+                    excere elit audaersperum fuga. Nam as quis aut la dolore dolorescimin porio ipsam rest, eumqui voluptat experum, omnia volore
                     </div>
                 </section>
             </article>
@@ -128,7 +136,7 @@ export const Portfolio = (props) => {
                 <section className="port-info-header-title">
                     <h3 className="port-info-title">INFOGRAPHICS & NEWS</h3>
                     <div className="info-desc-para">Et pa volores nient dolum es dolenitas dicimusciame rerciur, anis
-                        excere elit audaersperum fuga. Nam as quis aut la dolore dolorescimin porio ipsam rest, eumqui voluptat experum, omnia volore
+                    excere elit audaersperum fuga. Nam as quis aut la dolore dolorescimin porio ipsam rest, eumqui voluptat experum, omnia volore
                     </div>
                 </section>
             </article>
@@ -225,7 +233,7 @@ export const Portfolio = (props) => {
                 <section className="port-corps-header-title">
                     <h3 className="port-corps-title">U.S. PEACE CORPS</h3>
                     <div className="corps-desc-para">Et pa volores nient dolum es dolenitas dicimusciame rerciur, anis
-                        excere elit audaersperum fuga. Nam as quis aut la dolore dolorescimin porio ipsam rest, eumqui voluptat experum, omnia volore
+                    excere elit audaersperum fuga. Nam as quis aut la dolore dolorescimin porio ipsam rest, eumqui voluptat experum, omnia volore
                     </div>
                 </section>
             </article>
@@ -325,9 +333,16 @@ export const Portfolio = (props) => {
                     RESUME
                 </Link>
             </article>
-            <article className="port-img-gallery">
-                <ImageGallery items={photoScrollImages} />
-            </article>
+            <Button onClick={toggleChange}>Open</Button>
+            <Modal isOpen={isOpen} toggle={toggleChange}>
+                <ModalHeader toggle={toggleChange}>Images</ModalHeader>
+                <ModalBody>
+                    <ImageGallery items={photoScrollImages} />
+                </ModalBody>
+                <ModalFooter>
+                    <Button onClick={toggleChange}>Cancel</Button>
+                </ModalFooter>
+            </Modal>
         </>
     )
 }
