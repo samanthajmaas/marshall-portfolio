@@ -1,5 +1,18 @@
 @import "~react-image-gallery/styles/css/image-gallery.css";
 
+.modal{
+ max-width: 75%;
+ margin-right:18%;
+ margin-left: 18%;
+ outline: none;
+ margin-bottom: 10%;
+}
+
+.modalHeader{
+    font-size: 50px;
+    margin-bottom: -15%;
+}
+
 .port-main-header-cont{
     margin-left: 20%;
 }

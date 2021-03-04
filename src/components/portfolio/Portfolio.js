@@ -6,7 +6,7 @@ import Img6 from "../imgs/wine-6.jpg"
 import Img5 from "../imgs/wine-5.jpg"
 import Img4 from "../imgs/wine-4.jpg"
 import ImageGallery from 'react-image-gallery';
-import { Modal, ModalHeader, ModalBody } from 'reactstrap';
+import { Modal, ModalHeader, ModalBody, ModalFooter, Button } from 'reactstrap';
 
 export const Portfolio = (props) => {
 
@@ -73,25 +73,34 @@ export const Portfolio = (props) => {
                 </section>
             </article>
 
-            <Modal isOpen={isSocialOpen} toggle={toggleSocialChange}>
-                <ModalHeader toggle={toggleSocialChange}>SOCIAL MEDIA & MARKETING</ModalHeader>
+            <Modal className="modal" isOpen={isSocialOpen}>
+                <ModalHeader className="modalHeader" toggle={toggleSocialChange}>SOCIAL MEDIA & MARKETING</ModalHeader>
                 <ModalBody>
                     <ImageGallery items={SocialImagesScroll} showFullscreenButton={false} showPlayButton={false} startIndex={index} />
                 </ModalBody>
+                <ModalFooter className = "cl-modal-btn" >
+                    <Button onClick={toggleSocialChange}>Close</Button>
+                </ModalFooter>
             </Modal>
 
-            <Modal isOpen={isInfoOpen} toggle={toggleInfoChange}>
-                <ModalHeader toggle={toggleInfoChange}>INFOGRAPHICS & NEWS</ModalHeader>
+            <Modal className="modal" isOpen={isInfoOpen}>
+                <ModalHeader className="modalHeader" toggle={toggleInfoChange}>INFOGRAPHICS & NEWS</ModalHeader>
                 <ModalBody>
                     <ImageGallery items={InfoImagesScroll} showFullscreenButton={false} showPlayButton={false} startIndex={index} />
                 </ModalBody>
+                <ModalFooter className = "cl-modal-btn">
+                    <Button  onClick={toggleInfoChange}>Close</Button>
+                </ModalFooter>
             </Modal>
 
-            <Modal isOpen={isPeaceOpen} toggle={togglePeaceOpen}>
-                <ModalHeader toggle={togglePeaceOpen}>U.S. PEACE CORPS</ModalHeader>
+            <Modal className="modal" isOpen={isPeaceOpen}>
+                <ModalHeader className="modalHeader" toggle={togglePeaceOpen}>U.S. PEACE CORPS</ModalHeader>
                 <ModalBody>
                     <ImageGallery items={PeaceImgsScroll} showFullscreenButton={false} showPlayButton={false} startIndex={index} />
                 </ModalBody>
+                <ModalFooter className = "cl-modal-btn">
+                    <Button  onClick={togglePeaceOpen}>Close</Button>
+                </ModalFooter>
             </Modal>
 
             {
